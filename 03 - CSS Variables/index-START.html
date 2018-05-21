@@ -61,7 +61,21 @@
 
   <script>
 
+    const spacingInput = document.querySelector('#spacing');
+    const blurInput = document.querySelector('#blur');
+    const baseInput = document.querySelector('#base');
 
+    spacingInput.addEventListener('input', event => {
+      document.documentElement.style.setProperty('--spacing', `${spacingInput.value}px`);
+    });
+
+    blurInput.addEventListener('input', event => {
+      document.documentElement.style.setProperty('--blur', `${blurInput.value}px`);
+    });
+
+    baseInput.addEventListener('input', event => {
+      document.documentElement.style.setProperty('--base', `${baseInput.value}`);
+    });
 
   </script>
 
